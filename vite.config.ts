@@ -64,7 +64,7 @@ export default defineConfig({
     base: "/lrc-maker/",
     define: {
         "import.meta.env.app": JSON.stringify({ hash, updateTime, version: pkg.version }),
-        "i18n.langCodeList": JSON.stringify(langFileList.map((f) => f.slice(0, -json_suffix.length))),
+        "i18n.langCodeList": JSON.stringify(langFileList.map((f) => f.slice(0, -json_suffix.length)),
         "i18n.langMap": JSON.stringify(langMap),
     },
     css: {

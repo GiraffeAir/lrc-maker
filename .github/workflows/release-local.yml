@@ -24,6 +24,8 @@ jobs:
                   run_install: |
                       - args: [--frozen-lockfile, --strict-peer-dependencies]
 
+            - run: pnpm run check:fmt
+            - run: pnpm run check:lint
             - run: pnpm run build
 
             - name: Deploy Github Pages
